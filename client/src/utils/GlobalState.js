@@ -9,9 +9,11 @@ const StoreProvider = ({ value = [], ...props }) => {
     //state -> most up to date version of global state object
     //dispatch -> method used to execute to update our state
     const [state, dispatch] = useProductReducer({
-      products: [],
-      categories: [],
-      currentCategory: '',
+        products: [],
+        cart: [],
+        cartOpen: false,
+        categories: [],
+        currentCategory: ''
     });
     // use this to confirm it works!
     console.log(state);
